@@ -1,0 +1,6 @@
+- [superagent](https://www.npmjs.com/package/superagent)
+- [cheerio](https://www.npmjs.com/package/cheerio)
+- [async](https://www.npmjs.com/package/async)
+- [request](https://www.npmjs.com/package/request)
+- [iconv-lite](https://www.npmjs.com/package/iconv-lite)
+- [download](https://www.npmjs.com/package/download)

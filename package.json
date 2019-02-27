@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "one/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "cheerio": "^1.0.0-rc.2",
+    "download": "^7.1.0",
+    "html-parse": "0.0.4",
+    "iconv-lite": "^0.4.24",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0",
+    "superagent": "^4.0.0"
+  }
+}

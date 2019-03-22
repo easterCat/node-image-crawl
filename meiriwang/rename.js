@@ -22,9 +22,7 @@ files.forEach((file, index) => {
 
   //更改文件夹名称
   // fs.renameSync(old_dir, new_dir);
-
   renameImgs(new_dir);
-
   // op.insert(["美女", file, Number(files.length), file, cover_img_path, `mrw/mrw_${index + 1}`, `mrw_${index + 1}`]);
 });
 

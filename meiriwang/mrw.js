@@ -14,7 +14,7 @@ let collectUrl = "https://www.meituri.com/a/25396/";
 let imageUrl = "https://ii.hywly.com/a/1/25396/40.jpg"; //https://ii.hywly.com/a/1/25373/1.jpg
 let all = [];
 
-init(1, 2);
+init(4, 2);
 
 async function init(startPage, endPage) {
   for (let i = startPage; i <= endPage; i++) {
@@ -43,7 +43,6 @@ async function init(startPage, endPage) {
     let childs = all[index].childs;
     let title = all[index].title;
 
-    console.log(title);
     if (childs) {
       let c_length = childs.length;
       for (let c = 0; c < c_length; c++) {
@@ -55,7 +54,7 @@ async function init(startPage, endPage) {
           fs.mkdirSync(`mrw/${title}`);
         }
 
-        await downloadImg2(childs[c], `mrw/${title}/${title}_image${c}.jpg`);
+        await downloadImg(childs[c], `mrw/${title}/${title}_image${c}.jpg`);
         console.log(
           "DownloadThumbsImg:",
           title,
@@ -123,12 +122,11 @@ async function getAndSaveImg(page) {
       let a_link = `${link}${j}.jpg`;
       config.childs.push(a_link);
     }
-
     all.push(config);
   }
 }
 
-async function downloadImg2(url, dest) {
+async function downloadImg(url, dest) {
   let res = await handleRequestByPromise2(url);
   fs.writeFileSync(dest, res, {
     encoding: "binary"
